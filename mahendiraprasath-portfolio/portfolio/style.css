@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+}
+
+nav {
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo {
+  color: #00bcd4;
+}
+
+/* Home */
+
+.home {
+  height: 100vh;
+  background: linear-gradient(to right, #000, #333);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #00bcd4;
+  margin-bottom: 15px;
+}
+
+.home span {
+  color: #00bcd4;
+}
+
+.btn-group {
+  margin-top: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 25px;
+  background: #00bcd4;
+  color: black;
+  border-radius: 5px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.dark-btn {
+  background: black;
+  color: white;
+}
+
+/* Sections */
+
+.section {
+  padding: 60px 80px;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+}
+
+.skill-box {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.skill-box div {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+/* Cards */
+
+.card,
+.project-card {
+  background: white;
+  padding: 20px;
+  margin: 15px 0;
+  border-left: 5px solid #00bcd4;
+  box-shadow: 0 0 10px gray;
+}
+
+.cert-list {
+  margin-left: 20px;
+}
+
+/* Footer */
+
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+/* ============================= */
+/* ✅ MOBILE RESPONSIVE DESIGN */
+/* ============================= */
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .home {
+    padding: 20px;
+    height: auto;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .home h1 {
+    font-size: 22px;
+  }
+
+  .home p {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .section {
+    padding: 30px 20px;
+  }
+
+  .skill-box {
+    justify-content: center;
+  }
+
+  .card,
+  .project-card {
+    margin: 12px 0;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
+
+/* ============================= */
+/* ✅ SMALL MOBILE (VERY SMALL) */
+/* ============================= */
+
+@media (max-width: 480px) {
+  .home h1 {
+    font-size: 20px;
+  }
+
+  .home p {
+    font-size: 13px;
+  }
+
+  .btn {
+    width: 90%;
+    text-align: center;
+  }
+
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav h2 {
+    font-size: 20px;
+  }
+}
+/* ============================= */
+/* ✅ ANIMATIONS */
+/* ============================= */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button Hover Animation */
+.btn:hover,
+button:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px #00bcd4;
+}
+
+/* Card Hover Animation */
+.card:hover,
+.project-card:hover {
+  transform: translateY(-8px);
+  transition: 0.3s ease;
+}
+
+/* Profile Photo Pulse */
+.profile-pic {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 188, 212, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(0, 188, 212, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 188, 212, 0);
+  }
+}
